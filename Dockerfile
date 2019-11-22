@@ -13,7 +13,8 @@ ENV VER_AMPLICAN="1.8.0"
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -yq update
-RUN apt-get install software-properties-common
+RUN apt-get install -yq --no-install-recommends \
+    software-properties-common
 
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu/bionic-cran35/'
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9

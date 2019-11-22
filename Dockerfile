@@ -47,7 +47,7 @@ RUN bash build/opt-build.sh $OPT
 
 # build the tools in this repo, separate to reduce build time on errors
 COPY . .
-RUN bash build/opt-build-local.sh $OPT
+#RUN bash build/opt-build-local.sh $OPT
 
 FROM ubuntu:18.04 
 

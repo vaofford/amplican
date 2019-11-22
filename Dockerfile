@@ -21,8 +21,8 @@ ENV OPT /opt/wsi-t113
 ENV PATH $OPT/bin:$PATH
 ENV LD_LIBRARY_PATH $OPT/lib
 
-#ADD build/opt-build.sh build/
-#RUN bash build/opt-build.sh $OPT
+ADD build/opt-build.sh build/
+RUN bash build/opt-build.sh $OPT
 
 FROM ubuntu:18.04 
 

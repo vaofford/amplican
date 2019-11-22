@@ -12,7 +12,10 @@ ENV VER_AMPLICAN="1.8.0"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN apt-get -yq update
+
 RUN apt-get install -yq --no-install-recommends \
     libcairo2-dev \
     r-base-dev
@@ -32,6 +35,8 @@ LABEL maintainer="vo1@sanger.ac.uk" \
 
 MAINTAINER  Victoria Offord <vo1@sanger.ac.uk>
 
+RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN apt-get -yq update
 RUN apt-get install -yq --no-install-recommends \
   r-base

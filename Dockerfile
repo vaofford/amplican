@@ -62,6 +62,7 @@ RUN apt-get -yq update \
     software-properties-common \
     dirmngr
 
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN apt-get -yq update

@@ -66,6 +66,7 @@ RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN apt-get -yq update
 RUN apt-get install -yq --no-install-recommends \
+  locales \
   r-base
 
 RUN locale-gen en_US.UTF-8

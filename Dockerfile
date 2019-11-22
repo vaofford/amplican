@@ -39,7 +39,7 @@ WORKDIR /tmp/builder
 
 COPY build/rlib-build.R build/
 RUN mkdir -p $R_LIBS_USER
-RUN Rscript build/rlib-build.R $R_LIBS_USER 2>&1 | grep '^\*'
+#RUN Rscript build/rlib-build.R $R_LIBS_USER 2>&1 | grep '^\*'
 
 # build tools from other repos
 ADD build/opt-build.sh build/

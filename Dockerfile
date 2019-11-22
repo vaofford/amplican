@@ -10,6 +10,8 @@ ENV LANG C.UTF-8
 # ALL tool versions used by opt-build.sh
 ENV VER_AMPLICAN="1.8.0"
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get -yq update
 RUN apt-get install -yq --no-install-recommends \
     libcairo2-dev \

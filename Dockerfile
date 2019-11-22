@@ -60,7 +60,8 @@ MAINTAINER  Victoria Offord <vo1@sanger.ac.uk>
 RUN apt-get -yq update \
 && apt-get install -qy --no-install-recommends \
     software-properties-common \
-    dirmngr
+    dirmngr \
+    gpg-agent
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 51716619E084DAB9
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'

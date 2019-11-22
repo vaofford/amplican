@@ -1,1 +1,1 @@
-instLib = commandArgs(T)[1]
+paste("hi")

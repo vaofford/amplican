@@ -20,4 +20,4 @@ ipak_bioconductor <- function( pkg ){
 }
 
 ipak( c( "BiocManager" ) )
-ipak_bioconductor( c( "ampliCan" ) )
+ipak_bioconductor( c( "amplican" ) )

@@ -8,14 +8,14 @@ rm( r )
 ipak <- function( pkg ){
   new.pkg <- pkg[ !( pkg %in% installed.packages()[, "Package"] ) ]
   if ( length( new.pkg ) )
-    install.packages( new.pkg, ask = FALSE, lib = instLib, lib.loc = instLib )
+    install.packages( new.pkg, ask = FALSE, lib = instLib )
   sapply( pkg, library, character.only = TRUE )
 }
 
 ipak_bioconductor <- function( pkg ){
   new.pkg <- pkg[ !( pkg %in% installed.packages()[, "Package"] ) ]
   if ( length( new.pkg ) )
-    BiocManager::install( new.pkg, ask = FALSE, lib = instLib, lib.loc = instLib )
+    BiocManager::install( new.pkg, ask = FALSE, lib = instLib )
   sapply( pkg, library, character.only = TRUE )
 }
 

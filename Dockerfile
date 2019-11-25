@@ -20,6 +20,9 @@ RUN apt-get -yq update
 RUN apt-get install -yq --no-install-recommends \
     locales \
     libcairo2-dev \
+    libmariadbclient-dev \
+    libssl-dev \
+    libxml2-dev \
     r-base-dev
 
 RUN locale-gen en_US.UTF-8

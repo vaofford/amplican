@@ -21,6 +21,7 @@ RUN apt-get install -yq --no-install-recommends \
     locales \
     libcairo2-dev \
     libmariadbclient-dev \
+    libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
     r-base-dev
